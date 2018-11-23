@@ -1,0 +1,45 @@
+git的使用总结
+
+//	//	//
+git init	初始化一个git仓库	
+mkdir 文件名	创建一个文件夹	
+touch 1.txt	创建一个txt文件	
+vi 1.txt	编辑当前文件	
+-	Ctrl+c ：wq	保存并退出(i)插入模式
+clear	清除屏幕	
+cd 文件名	打开相应的文件夹	
+cd ./	同级文件	
+cd ../	上一级文件	
+cd /	回到根目录	
+第一次使用git初始化用户名		
+git config –global user.name”“”	账户	
+git config –global user.email”“”	邮箱名	
+git config –list	查看当前的配置信息	
+git status	查看当前仓库文件的状态	红色在工作区(本地)，绿色在暂存区，白色在历史区
+git add .	把文件从工作区(本地)提交到暂存区	
+git rm –cached 文件名	删除暂存区文件	
+git checkout 文件名	把暂存区代码覆盖工作区(本地)文件	
+git diff	工作区(本地)和暂存区的比较	能看出来改了哪
+git diff –cached	暂存区和历史区比较	
+git diff master	工作区(本地)和历史区比较	
+git commit -m”注释”	把代码从暂存区提交到历史区	每提交一次到历史区，都会产生一个唯一的版本号，可以根据版本号把代码回滚到之前的版本 注释：是对当前修改代码的一个标识，可以通过注释回滚到自己改的代码
+git log	打印出以往历史区的版本号	
+git reset –hard 版本号	把历史区之前的版本拉渠道本地	
+git add -a -m”注释”	从工作区(本地)提交到历史区	不是直接提交到的 也是经过了暂存区 只不过看不到而已
+git 的分支		
+git branch 分支名	创建一个分支	
+git checkout 分支名	切换到这个分支下	
+git branch	查看当前仓库所有的分支，并且查看当前在哪个分支上	当前分支为绿色，其他为白色
+cat 文件名	查看当前文件内容	
+git merge 分支名	把分支合并到主干上	必须在主干上合并分支上的代码
+远程仓库
+
+/	/
+git remote add 仓库名+远程仓库地址	关联远程仓库
+git remote -v	查看和远程仓库的关联情况
+git push 仓库名 master	把历史区的代码提交到了远程仓库主干上
+git clone+远程仓库	把远程仓库的地址拉取到本地
+git pull origin master	拉取最新的代码；不能修改
+git pull	拉取最新的代码；不能修改
+如果多人协作开发，需要添加权限； 
+github官网当前目录下 setting—>Collaborators –>add Collaborators;

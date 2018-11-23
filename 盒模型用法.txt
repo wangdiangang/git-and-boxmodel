@@ -1,0 +1,23 @@
+js中盒子模型属性
+
+属性	                    含义             	                                                            用法
+clientWidth	             可视区域的的宽度+左右内边框	
+clientHeight	可视区域的的高度+上下内边框	
+clientLeft	左边框的宽度	
+clientTop	上边框的宽度	
+offsetWidth	盒子的总宽度	
+offsetHeight	盒子的总高度	
+offsetParent	父级参照物	
+offsetLeft	左偏移量	
+offsetTop	上偏移量	
+scrollWidth	一个左内边框+内容的真是宽度(有溢出)	
+scrollHeight	一个上内边框+内容的真是高度(有溢出)	
+
+
+
+
+
+
+以上是只读属性，不可修改   	以下两个是可读写属性		
+scrollLeft	横向滚动条的宽度	                                                                            元素(‘scrollLeft’,500)
+scrollTop	纵向滚动条的高度	
