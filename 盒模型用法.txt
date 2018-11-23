@@ -1,23 +1,43 @@
-jsÖĞºĞ×ÓÄ£ĞÍÊôĞÔ
+jsä¸­ç›’å­æ¨¡å‹å±æ€§
 
-ÊôĞÔ	                    º¬Òå             	                                                            ÓÃ·¨
-clientWidth	             ¿ÉÊÓÇøÓòµÄµÄ¿í¶È+×óÓÒÄÚ±ß¿ò	
-clientHeight	¿ÉÊÓÇøÓòµÄµÄ¸ß¶È+ÉÏÏÂÄÚ±ß¿ò	
-clientLeft	×ó±ß¿òµÄ¿í¶È	
-clientTop	ÉÏ±ß¿òµÄ¿í¶È	
-offsetWidth	ºĞ×ÓµÄ×Ü¿í¶È	
-offsetHeight	ºĞ×ÓµÄ×Ü¸ß¶È	
-offsetParent	¸¸¼¶²ÎÕÕÎï	
-offsetLeft	×óÆ«ÒÆÁ¿	
-offsetTop	ÉÏÆ«ÒÆÁ¿	
-scrollWidth	Ò»¸ö×óÄÚ±ß¿ò+ÄÚÈİµÄÕæÊÇ¿í¶È(ÓĞÒç³ö)	
-scrollHeight	Ò»¸öÉÏÄÚ±ß¿ò+ÄÚÈİµÄÕæÊÇ¸ß¶È(ÓĞÒç³ö)	
-
-
+å±æ€§	  (e)                  å«ä¹‰             	                                                            ç”¨æ³•
+clientWidth	             å¯è§†åŒºåŸŸçš„çš„å®½åº¦+å·¦å³å†…è¾¹æ¡†	
+clientHeight	å¯è§†åŒºåŸŸçš„çš„é«˜åº¦+ä¸Šä¸‹å†…è¾¹æ¡†	
+clientLeft	å·¦è¾¹æ¡†çš„å®½åº¦	
+clientTop	ä¸Šè¾¹æ¡†çš„å®½åº¦	
+offsetWidth	ç›’å­çš„æ€»å®½åº¦	
+offsetHeight	ç›’å­çš„æ€»é«˜åº¦	
+offsetParent	çˆ¶çº§å‚ç…§ç‰©	
+offsetLeft	å·¦åç§»é‡	
+offsetTop	ä¸Šåç§»é‡	
+scrollWidth	ä¸€ä¸ªå·¦å†…è¾¹æ¡†+å†…å®¹çš„çœŸæ˜¯å®½åº¦(æœ‰æº¢å‡º)	
+scrollHeight	ä¸€ä¸ªä¸Šå†…è¾¹æ¡†+å†…å®¹çš„çœŸæ˜¯é«˜åº¦(æœ‰æº¢å‡º)	
 
 
 
 
-ÒÔÉÏÊÇÖ»¶ÁÊôĞÔ£¬²»¿ÉĞŞ¸Ä   	ÒÔÏÂÁ½¸öÊÇ¿É¶ÁĞ´ÊôĞÔ		
-scrollLeft	ºáÏò¹ö¶¯ÌõµÄ¿í¶È	                                                                            ÔªËØ(¡®scrollLeft¡¯,500)
-scrollTop	×İÏò¹ö¶¯ÌõµÄ¸ß¶È	
+
+
+ä»¥ä¸Šæ˜¯åªè¯»å±æ€§ï¼Œä¸å¯ä¿®æ”¹   	ä»¥ä¸‹ä¸¤ä¸ªæ˜¯å¯è¯»å†™å±æ€§		
+scrollLeft	æ¨ªå‘æ»šåŠ¨æ¡çš„å®½åº¦	                                                                            å…ƒç´ (â€˜scrollLeftâ€™,500)
+scrollTop	çºµå‘æ»šåŠ¨æ¡çš„é«˜åº¦	
+
+
+
+ç”¨æ³•
+  oBox.addEventListener("touchstart",function (e) {
+        console.log(1);
+        // Touchevent : è§¦æ‘¸çš„äº‹ä»¶å¯¹è±¡
+        // åœ¨è§¦æ‘¸çš„äº‹ä»¶å¯¹è±¡ä¸­ï¼ŒæŠŠè§¦æ‘¸çš„ä¿¡æ¯çš„è·ç¦»å€¼å­˜æ”¾åœ¨eçš„touchesä¸­ï¼›
+        console.log(e.touches[0].clientX);
+    });
+    oBox.addEventListener("touchmove",function (e) {
+        console.log(2);
+        console.log(e.touches[0].clientX);
+        console.log(a);
+    });
+    oBox.addEventListener("touchend",function () {
+        console.log(100);
+    });
+
+
